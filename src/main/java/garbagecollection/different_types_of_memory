@@ -1,0 +1,38 @@
+
+STACK MEMORY:
+=============
+  - It stores temporary variables and separate memory block for threads
+  - Store primitive data types
+  - Store reference of the Heap objects
+        - Strong reference
+        - Weak reference
+            - Soft reference
+  - Each thread has its own Stack memory
+  - Variables within a SCOPE is only visible and as soon as any variable is out of SCOPE, it gets deleted
+    from the Stack(in LIFO order).
+  - When Stack memory goes full, it throws "java.lang.StackOverflowError"
+
+
+HEAP MEMORY:
+=============
+  - It stores objects.
+  - There is no order of allocating the memory.
+  - Garbage Collector is used to delete  the unreferenced objects from the Heap.
+        - Mark and Sweep Algorithm
+        - Types of GC:
+          - Single GC
+          - Parallel GC
+          - CMS (Concurrent Mark Sweep)
+          - G1
+  - Heap Memory is stored with all the threads.
+  - Heap Memory also contains the String Pool.
+  - When Heap memory goes full, it throws "java.lang.OutOfMemoryError"
+  - Heap Memory is futher divided into:
+        - Young Generation (minor GC happens here)
+          - Eden
+          - Survivor
+        - Old Generation (major GC happens here)
+        - Permanent Generation (It was part of Heap memory and it was not extendable) old Java version)
+
+          This is now replaced by Metaspace from JDK 8.0 (this is expandable since it is NOT part of HEAP memory)
+

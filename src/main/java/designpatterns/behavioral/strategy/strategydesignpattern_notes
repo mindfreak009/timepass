@@ -1,0 +1,31 @@
+
+⦿ Strategy design pattern is a behavioral design pattern that enables selecting an
+   algorithm at run-time.
+⦿ Instead of implementing a single algorithm directly, code receives run-time instructions
+   as to which in a family of algorithms to use.
+⦿ In short, Strategy design pattern defines a family of algorithms, encapsulates each one and makes them
+   interchangeable at runtime.
+
+Where it is used ?
+==================
+➼ When multiple algorithms can be used for same task.
+➼ When you need to switch logic dynamically based on conditions.
+
+Concept explanation:
+===================
+• Think of an e-commerce site where discounts where discounts vary - "Festival discount", "new-user discount"
+  or "no discount".
+• You can dynamically choose which discount strategy to apply.
+
+Advantages:
+===========
+➼ Makes the code flexible and easier to understand.
+➼ Avoids complex if-else conditions.
+➼ You can easily add new strategies without modifying existing ones.
+
+Strategy design pattern
+========================
+⦿ Strategy design pattern is commonly asked with:
+   "How will you design a flexible discount or sorting mechanism ?"
+
+⦿ It shows understanding of Open/Closed principle (open for extension, closed for modifications).

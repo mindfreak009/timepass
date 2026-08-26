@@ -1,0 +1,55 @@
+Priority Queue:
+=============
+    a) A data structure where elements are retrieved based upon priority. (Heaps are used to implement Priority Queue)
+    b) There are group of elements stored, return the one which has highest priority.
+
+                                   PriorityQueue
+                                  /             \
+                                 /               \
+                                /                 \
+                    min PriorityQueue       max PriorityQueue
+                      (min heap)                (max heap)
+                   [increasing order]      [decreasing order]
+
+    • The default implementation of PriorityQueue uses a Min-Heap (smallest element at the top).
+    • Max-Heap can be implemented by providing a custom comparator.
+
+==============================================================================================
+******.  PriorityQueue is implemented as a min-heap by default. (for natural ordering) *****
+==============================================================================================
+
+1. Priority can be element itself or a property related to the element
+   For e.g..,
+      a)  Given 10 numbers, find the smallest & 2nd smallest element
+          ==========================================================
+      b)  Insert 5 more numbers, now return the smallest.
+
+2. Property of element is priority
+      a)  In a class, there are 20 students return the name of the student who got the
+          highest marks.
+          =============================================================================
+      b)  If there are multiple  toppers, return the one whose name is lexicographically
+          smaller.
+
+3. Time Complexity of Priority Queue is O(log N)..   Since, it is based on Heap concepts.
+===========================================================================================
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(1);
+        System.out.println(queue.size()); // Output: 1
+
+        System.out.println(queue.remove()); // throws Exception, if empty
+        System.out.println(queue.poll());
+
+        System.out.println(queue.element()); // throws Exception, if empty
+        System.out.println(queue.peek());
+
+        // =======================================================================
+
+ Queue<Integer> queue2 = new ArrayBlockingQueue<>(2);
+        System.out.println(queue2.add(1));  // true
+        System.out.println(queue2.offer(1));  // true
+
+        System.out.println(queue2.offer(3));  // throws Exception
+        System.out.println(queue2.offer(3));  // false
+

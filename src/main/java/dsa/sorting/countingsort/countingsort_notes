@@ -1,0 +1,7 @@
+●  Counting Sort calculates positions by counting item frequencies.
+●  Counting Sort is a non-comparison sorting algorithm.
+●  Use Counting Sort when:
+        ◘ Values are integers
+        ◘ Range is small
+        ◘ Maximum value is known
+Important:  All the numbers in the array should be non-negative numbers.

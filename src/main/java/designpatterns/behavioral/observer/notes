@@ -1,0 +1,25 @@
+
+Observer Design Pattern:
+========================
+    ○ The Observer Design Pattern defines a ONE-to-MANY relationships between objects.
+    ○ When one object(Subject) changes it's state, all its dependents(Observers) are notified automatically.
+
+
+Where it is used ?
+====================
+   ○ Event Handling Systems
+   ○ Notification Systems
+   ○ UI frameworks
+   ○ Messaging and Pub/Sub systems
+
+Advantages:
+===========
+   ○ Decouples the Subject and Observers.
+   ○ Easy to add or remove Observers dynamically.
+   ○ Works well for event-driven systems.
+
+Interviewer tips:
+================
+   ○ "How would you design a notification system" ?
+      This pattern is your go-to answer.
+   ○ In modern systems, this is implemented via event-driven architecture using Kafka, RabbitMQ or Spring Events.

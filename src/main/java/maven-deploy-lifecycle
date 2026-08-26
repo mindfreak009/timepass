@@ -1,0 +1,34 @@
+$ mvn deploy
+==============
+
+If we do not define remote repository, then MAVEN during "mvn deploy" command, will face below error:
+                                                         ============
+=========================================================================================================
+Deployment failed: repository element was not specified in the POM inside distributionManagement element
+========================================================================================================
+
+pom.xml
+========
+<distributionManagement>
+    <repository>
+        <id> remote repository </id>
+        <url> https://remote-repository-url </url>
+    </repository>
+</distributionManagement>
+
+
+
+settings.xml  (usually, we store our username & password here...)
+==================================================================
+<servers>
+    <server>
+        <id>  remote-repository-id  </id>
+        <username>  remote-repository-username  <username>
+        <password>  remote-repository-password  <password>
+    </server>
+</servers>
+
+================================================================================================================
+P.S : If we want to deploy the manifest to Maven central repository : https://repo.maven.apache.org/maven2
+Since it's public, we do not need username and password in settings.xml
+===============================================================================================================

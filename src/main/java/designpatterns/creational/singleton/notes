@@ -1,0 +1,5 @@
+Using an enum is the simplest and safest way to implement a singleton in Java.
+It automatically protects against:
+    • Multiple instances via serialization/deserialization
+    • Reflection attacks (mostly)
+    • Thread-safety issues during initialization

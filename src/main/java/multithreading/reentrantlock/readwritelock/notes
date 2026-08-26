@@ -1,0 +1,3 @@
+- ReadWriteLock (interface) allows multiple threads to read resources concurrently as long as no thread is writing to it.
+- It give exclusive access to write operations.
+-

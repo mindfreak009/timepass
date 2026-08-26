@@ -1,0 +1,56 @@
+Given :
+emp table - empName, empId
+sal  table -  empId, amount
+
+Print the output as :
+range(0-100000) (100000-200000),   name of employees falling under this category in mysql
+
+
+emp table:
+============
+empName	    empId
+Alice	      1
+Bob           2
+Charlie	      3
+Dave	      4
+Eve	          5
+
+
+sal table:
+===============
+empId	 amount
+1	      90000
+2	     150000
+3	     120000
+4	     200000
+5	      50000
+
+The output of the query will be:
+================================
+
+salary_range	employee_names
+================================
+0-100000	      Alice, Eve
+100000-200000	  Bob, Charlie
+
+
+SQL query:
+==========
+SELECT
+    CASE
+        WHEN amount BETWEEN 0 AND 100000 THEN '0-100000'
+        WHEN amount BETWEEN 100001 AND 200000 THEN '100000-200000'
+        ELSE 'Other'                                     -- You can add more ranges as needed
+    END AS salary_range,
+    GROUP_CONCAT(empName ORDER BY empName) AS employee_names
+FROM
+    emp
+JOIN
+    sal ON emp.empId = sal.empId
+GROUP BY
+    salary_range
+ORDER BY
+    FIELD(salary_range, '0-100000', '100000-200000');
+
+
+

@@ -1,0 +1,28 @@
+
+@InitBinder annotation
+=======================
+
+1) The @InitBinder annotation is used to customize the data binding process for web request parameters in a controller.
+
+2) It allows you to define methods that will be invoked before the actual request handler methods are called,
+   giving you the opportunity to pre-process request data, validate it, or perform other necessary tasks.
+
+3) If you want to customize the request being sent to the controller.
+4) It is defined in the controller, helps in controlling and formatting each and every request that comes to it.
+5) This annotation is used with the methods which initializes WebDataBinder and works as a preprocessor
+   for each request coming to the controller.
+
+   @InitBinder
+   public void initBinder(WebDataBinder binder) {
+       SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+       binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
+       binder.registerCustomEditor(String.class, "firstName",  new FirstNamePropertyEditor());
+   }
+
+
+   public class FirstNamePropertyEditor extends PropertyEditorSupport {
+        @Override
+        public void setAsText(String text) throws IllegalArgumentException {
+            setValue(text.trim().toLowerCase());
+        }
+   }

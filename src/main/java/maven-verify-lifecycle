@@ -1,0 +1,30 @@
+$ mvn verify
+=============
+
+It can perform some additional checks apart from unit test cases like :
+  1) Static code Analysis
+  2) Checksum verification
+
+PMD is a source code analyser :
+===============================
+    (1) Finds unused variable
+    (2) Finds unused imports
+    (3) Empty catch block
+    (4) No usage of object
+    (5) Finds duplicate code etc...
+
+
+ <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <version>3.21.2</version>
+    <executions>
+        <execution>
+            <id>pmd-analysis</id>
+            <phase>verify</phase>
+            <goals>
+                <goal>pmd</goal>
+            </goals>
+        </execution>
+    </executions>
+ </plugin>

@@ -1,0 +1,12 @@
+
+When you hear phrases like:
+
+   •  "Return Top K"
+   •  "Print K largest"
+   •  "Most frequent K"
+   •  "Highest scoring K"
+   •  "Leaderboard"
+   •  "K nearest"
+
+you should immediately think:
+   • Use a min-heap of size K.

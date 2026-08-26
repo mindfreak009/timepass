@@ -1,0 +1,32 @@
+Multithreading :
+===================
+
+➼  CPU is the brain of the computer.
+➼  A core is an individual processing unit within a CPU. Modern CPUs can have multiple cores, allowing them
+    to perform multiple tasks simultaneously.
+➼  A quad-core processor has 4 cores, allowing it to perform 4 tasks simultaneously.
+    For instance:
+       • One core could handle your web browser, another your music player, another a download manager,
+         and another a background system update.
+➼  A program  is a set of instructions written in a programming language that tells a computer how to
+    perform a specific task.
+       • e.g., Microsoft Word is a program that allows users to create and edit documents.
+
+➼  A process is an instance of a program that is being executed. When a program runs, the OS creates a process to manage its execution.
+      • e.g., When we open a "Microsoft Word", it becomes a process in the OS.
+
+➼  A thread is the smallest unit of execution within a process. A process can have multiple threads, which share the same resources
+    but can run independently.
+      • e.g., A web browser like "Google Chrome",might use multiple threads for different tabs, with each tab running asa separate thread.
+
+➼ Multiṭasking allows an Operating System to run multiple processes simultaneously. On single-core CPU's, this is done through time-sharing,
+   rapidly switching between tasks. On multi-core CPU's, true parallel execution occurs, with tasks distributed across cores. The OS scheduler
+   balances the load, ensuring efficient and responsive system performance.
+
+➼ A Semaphore is a thread synchronization tool that maintains a set of permits.
+➼ Threads acquire permits to proceed and release them when done.
+➼ If no permits are available, threads block until one becomes available.
+
+
+
+

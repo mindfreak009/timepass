@@ -1,0 +1,12 @@
+
+ • This method works when the array elements are in the range 1 to n (length of the array).
+ • It’s in-place, O(n) time, O(1) extra space, and finds all duplicates.
+
+1. Idea of Cyclic Sort for Duplicates
+=======================================
+
+    • For an array of length n, each number num should ideally be at index: num - 1.
+    • Swap each number to its correct index until all numbers are either:
+          • in their correct place, or
+          • duplicates (because the correct place already has that number).
+    • After this, any number i not at index i-1 is a duplicate.

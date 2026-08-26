@@ -1,0 +1,29 @@
+
+You are given two tables: teams and goals.
+   ⦿ The teams table contains information about teams.
+   ⦿ The goals table records each goal scored by a team along with the time (in seconds) when the goal was scored.
+
+• Write an SQL query to calculate the number of goals scored within the first 30 seconds by each team.
+
+Output Requirements :
+=====================
+
+Display the following columns:
+   ⦿ team → team name
+   ⦿ goals_within_30_secs → number of goals scored within 30 seconds
+
+Sort the results by:
+   ⦿ Highest goal count first (descending order)
+   ⦿ If two teams have the same goal count, then sort them alphabetically by team name
+
+
+SQL query:
+==========
+    SELECT t.team_name AS team,
+       COUNT(*) AS goals_within_30_secs
+    FROM teams t
+    JOIN goals g
+    ON t.team_id = g.team_id
+    WHERE g.goal_time <= 30
+    GROUP BY t.team_name
+    ORDER BY goals_within_30_secs DESC, t.team_name ASC;

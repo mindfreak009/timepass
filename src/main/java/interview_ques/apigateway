@@ -1,0 +1,5 @@
+API GATEWAY :
+=============
+    ✔  In simple terms, it accepts the client request and route them to correct backend service based on API endpoint.
+    ✔  An API Gateway is a server that acts as an intermediary between clients and a collection of backend services or microservices.
+    ✔  It routes requests, handles authentication, and manages communication between the client and the backend.

@@ -1,0 +1,14 @@
+When to use Breadth First Search (BFS) :
+========================================
+1) When answers lies near the root node.
+2) When you are asked to search by level.
+
+Time Complexity: O(N)
+======================
+Because, we traverse the node only once.
+
+Breadth First Search (BFS) a.k.a Level Order Traversal(LOT) :
+=============================================================
+1)  First, visit the directly connecting nodes from the given node.
+2)  Then from those nodes, try to connect the sub-direct nodes.
+3)

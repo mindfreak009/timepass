@@ -1,0 +1,31 @@
+Double-Ended Queue
+======================
+      allows insertion and removal of elements from both ends.
+      Versatile, then regular queues and stacks because they support all the operations of both
+
+
+     /* INSERTION METHODS */
+     =======================
+
+     addFirst(E e): Inserts the specified element at the front.
+     addLast(E e):  Inserts the specified element at the end.
+     offerFirst(E e):  Inserts the specified element at the front, if possible.
+     offerLast(E e): Inserts the specified element at the end, if possible.
+
+
+     /* REMOVAL METHODS */
+     =======================
+
+     removeFirst(E e): Retrieves and removes the first element.
+     removeLast(E e):  Retrieves and removes the last element.
+     pollFirst(E e):  Retrieves and removes the first element, OR returns null if empty.
+     pollLast(E e):  Retrieves and removes the last element, OR returns null if empty.
+
+
+    /* EXAMINATION  METHODS */
+     =========================
+
+     getFirst(E e): Retrieves, but does not remove the first element.
+     getLast(E e):  Retrieves, but does not removes the last element.
+     peekFirst(E e):  Retrieves, but does not remove the first element OR returns null if empty.
+     peekLast(E e):  Retrieves, but does not removes the last element, OR returns null if empty.

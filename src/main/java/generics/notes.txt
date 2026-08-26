@@ -1,0 +1,60 @@
+
+GENERICS
+==========
+
+-- In Java Generics, wildcards(?) are a special kind of type argument that can be used in
+   method arguments OR Class Definitions to represent an unknown type.
+   ================    ==================
+
+-- They allow for more flexible and dynamic code by letting the type be specified later
+   OR be more loosely defined.
+
+
+===============================================================
+*******************       VERY IMPORTANT    ****************
+===============================================================
+
+--  Wildcards(?) can be used in method arguments and can be used only when we
+    are performing "READ-ONLY" operation
+    i.e....,  "WE DON'T WANT TO RETURN ANYTHING" from the method.
+
+=================================================================================
+
+ UPPER BOUND
+===============
+    -- To declare an upper-bounded wildcard, use the wildcard character (‘?’),
+    -- followed by the extends keyword, followed by its upper bound.
+
+    --  (↓)
+    public static double sum(List<? extends Number> numbers) {
+        double sum = 0;
+        for (Number num: numbers) {
+            sum+= num.doubleValue();
+        }
+        return sum;
+    }
+
+LOWER BOUND
+============
+
+    -- It is expressed using the wildcard character (‘?’),
+    -- followed by the super keyword, followed by its lower bound: <? super A>.
+
+    --  (↑)
+    public static void printNumbers(List<? super Integer> list) {
+        for(Object obj : list) {
+            System.out.println(obj);
+        }
+    }
+
+=========================================================================
+
+-- Java doesn't support generic exceptions due to Type Erasure.
+-- Type Erasure means that generic type information is removed at runtime.
+-- Since Exceptions are closely tied to Runtime Operations(like catching them in try-catch blocks),
+   having generic exceptions wouldn't work as expected.
+
+-- For e.g.., if you had an exception like MyGenericException<T>, you wouldn't be able to catch it with
+   a specific type parameter because that type information would be erased at runtime.
+
+

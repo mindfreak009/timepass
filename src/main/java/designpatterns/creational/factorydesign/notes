@@ -1,0 +1,7 @@
+The Factory Method Pattern allows you to create objects without exposing the creation logic to the client.
+Instead, it lets subclasses decide which object to create.
+
+Where it is used ?
+==================
+  • When a class cannot anticipate which class of objects it must create
+  • When you want to delegate object creation to subclasses.

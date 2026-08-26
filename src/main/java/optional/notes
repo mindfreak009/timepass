@@ -1,0 +1,32 @@
+◘ In Java, Optional is a container object introduced in Java 8 to handle null values safely and avoid NullPointerException.
+
+◘ It represents:
+    • a value may be present
+    • or may be empty
+
+◘ Instead of returning null, methods can return an Optional.
+
+◘ Creating Optional Objects
+     ➊ Optional.of()
+      ==============
+         Optional<String> name = Optional.of("John");
+     • Used when value is definitely NOT null.
+
+    ◘ If null is passed:
+      • Optional.of(null);
+      • It throws: NullPointerException
+
+    ➋ Optional.ofNullable()
+      =====================
+      • Used when value may be null.
+      • Optional<String> name = Optional.ofNullable(null);
+      ◘ This creates an empty Optional safely.
+
+    ➌ Optional.empty()
+      =================
+      • Optional<String> empty = Optional.empty();
+
+
+
+
+

@@ -1,0 +1,54 @@
+
+▶ LLM (Large Language Model) is a system trained to understand and generate human language.
+    ▶ Large:     trained on massive data with many parameters.
+    ▶ Language:  works with text, conversations and even code.
+    ▶ Model:     takes input and produces meaningful output.
+
+▶ LLM is a large AI model that understands and generates language.
+
+What can it do ?
+================
+   ❤ Answer questions
+   ❤ Summarize content
+   ❤ Write code
+   ❤ Explain concepts
+   ❤ Translate text
+   ❤ Generate or rewrite content
+
+Examples :
+==========
+    ❤ GPT
+    ❤ Claude
+    ❤ Gemini
+    ❤ Llama
+
+===============================================================================================
+
+AI prompts can be categorized by what you're asking the AI to do. Learning these types helps you get much better responses.
+Here are the main prompt types with simple examples.
+
+Prompt Type	                Purpose	                               Example
+Instruction	              Tell the AI what to do	        "Explain Kafka in simple terms."
+Question	              Ask for information	            "What is Kubernetes?"
+Role Prompt	              Assign a role	                    "Act as a Senior Java Architect."
+Context Prompt	          Provide background	            "I have 7 years of Java experience and I'm learning Kafka."
+Task Prompt	              Request a specific output	        "Write a Spring Boot Kafka producer."
+Step-by-Step Prompt	      Ask for a guided process	        "Teach me Kafka from scratch step by step."
+Few-Shot Prompt	          Give examples before the task	    "Input: Hi → Output: Hello. Input: Bye → Output: Goodbye. Now convert: Thanks."
+Zero-Shot Prompt	      No examples, just the task	    "Summarize this article."
+Chain-of-Thought Style	  Ask for reasoning or explanation	"Explain how Kafka processes a message step by step."
+Comparison Prompt	      Compare options	                "Kafka vs RabbitMQ for microservices."
+Brainstorming Prompt	  Generate ideas	                "Suggest 20 Java microservice project ideas."
+Transformation Prompt	  Rewrite or convert text	        "Rewrite this email professionally."
+Code Generation Prompt	  Create code	                    "Write a Spring Boot REST API."
+Code Review Prompt	      Improve existing code	            "Review this Java code for performance issues."
+Debugging Prompt	      Find and fix problems	            "Why am I getting a NullPointerException?"
+Planning Prompt	          Create a plan	                    "Create a 30-day Kafka learning roadmap."
+Persona Prompt	          Specify audience or style	        "Explain Kafka to a 10-year-old."
+Creative Prompt	          Generate creative content	        "Write a sci-fi story about AI."
+Analytical Prompt	      Analyze data or situations	    "Analyze the pros and cons of event-driven architecture."
+Decision Prompt	          Help choose	                    "Should I learn Kafka or Kubernetes first?"
+
+
+
+

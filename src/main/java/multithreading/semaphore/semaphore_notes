@@ -1,0 +1,33 @@
+Semaphores:
+=============
+   • There are 2 types of Semaphores :
+        ⦿ Binary Semaphores
+            » A Binary Semaphore restricts access to exactly one thread at a time.
+            =======================================================================
+            » The following code creates a binary semaphore with a single permit
+              Semaphore binarySemaphore = new Semaphore(1);
+
+              Example of Fair semaphore:
+              --------------------------
+              Semaphore s1 = new Semaphore(int permits, true)
+              Semaphore s2 = new Semaphore(3, true);
+
+              » Guarantees FIFO (First-In-First-Out) order.
+              » Threads are granted permits based on the exact sequence they requested access
+              » Prevents starvation but introduces a slight performance overhead.
+            ========================================================================
+            » It behaves similarly to a mutual exclusion lock (Mutex), functioning with only two valid states: 0 or 1 available permit
+            » It is initialized with exactly 1 permit. When a thread acquires the permit, the count drops to 0, locking the section from all other threads.
+
+
+       ⦿ Counting Semaphores:
+           » A Counting Semaphore allows multiple threads to access a shared resource simultaneously up to a predefined limit.
+           » It is initialized with a specific number of "permits" (N > 1)
+           » Each time a thread successfully calls acquire(), the permit count decreases by one.
+           » If the permit count reaches zero, any subsequent threads attempting to gain access will block until an existing thread calls release() to return a permit
+
+
+   Use cases of Semaphores:
+   ========================
+       »  API Rate Limiter
+       »  Parallel Task Limit

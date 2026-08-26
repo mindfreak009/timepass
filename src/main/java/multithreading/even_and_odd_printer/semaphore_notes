@@ -1,0 +1,18 @@
+In Java, initializing a semaphore with zero permits (new Semaphore(0)) means that the semaphore starts in a fully locked state.
+No thread can immediately pass through it.
+
+Here is exactly how it behaves and why you would use it:
+ The Core Behavior
+ ==================
+    Immediate Blocking:
+    The very first thread that calls semaphore.acquire() will block and wait.
+    It cannot proceed because there are zero permits to give away.
+
+    Unlocking Mechanism:
+    The semaphore will only open up when a different thread calls semaphore.release().
+    Calling release() increases the permit count from 0 to 1, waking up a waiting thread.
+
+ Why Initialize with 0?
+ ======================
+    While a semaphore with 1 or more permits is used to protect a limited resource, a zero-permit semaphore is used to coordinate execution order between threads.
+    It forces one thread to wait until another thread signals that it is ready.

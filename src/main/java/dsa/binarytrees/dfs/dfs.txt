@@ -1,0 +1,7 @@
+Depth First Search (DFS):
+==========================
+DFS has 3 types :
+   a) PreOrder -> Root, Left, Right
+   b) InOrder  -> Left, Root, Right
+   c) PostOrder -> Left, Right , Root
+

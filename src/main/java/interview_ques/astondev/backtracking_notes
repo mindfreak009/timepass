@@ -1,0 +1,7 @@
+
+Backtracking:
+=============
+
+• Backtracking is an algorithmic paradigm that systematically searches for solutions by exploring the space of all possible candidates.
+• It incrementally builds a solution candidate and abandons it as soon as it determines that the candidate cannot lead to a valid solution.
+• This process continues until all possible solutions are found.

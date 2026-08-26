@@ -1,0 +1,6 @@
+-- Java CompletableFuture is part of following package:
+     java.util.concurrent
+
+-- By default, CompletableFuture tasks often run on daemon threads due to the use of ForkJoinPool.commonPool
+-- You can control the thread type by providing a Custom Executor Service.
+-- The CompletableFuture task itself doesn't dictate whether it's daemon or user thread.

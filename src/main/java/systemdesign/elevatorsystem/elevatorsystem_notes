@@ -1,0 +1,19 @@
+
+Observor Pattern for Event Handling :
+=====================================
+  • Notifies system components of state changes
+  • Enables real-time updates for display panels and monitoring systems.
+
+
+Command Pattern for Request Processing :
+========================================
+  • Encapsulates each request as an object
+  • Allows for request queuing, prioritization, and cancellation
+
+
+Strategy Pattern for Scheduling Algorithms :
+===========================================
+  • Enables different scheduling strategies
+  • Can switch between algorithms based on time of day or building needs.
+
+

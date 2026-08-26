@@ -1,0 +1,39 @@
+Binary Search On Answer / KOKO Type
+====================================
+
+Binary Search On Answer
+-----------------------
+ -- Sometimes, we overlook the possibility of using binary search as a solution to a problem,
+ -- especially when we see that the given array is unsorted.
+
+ -- Let's consider a well-known problem called "KOKO Eating Banana" to illustrate this concept.
+ -- (Please take a moment to familiarize yourself with this problem before continuing with the discussion.)
+ -- These types of problems, including the "KOKO Eating Banana" problem, are commonly referred to as "Binary Search on Answer" problems.
+ -- To make it easier to remember within our coding group, we simply call them "koko type problems."
+
+ -- By using binary search on the answer, the algorithm avoids iterating through all possible eating
+ -- speeds and instead uses a divide-and-conquer approach to converge on the optimal solution more quickly.
+ -- It repeatedly adjusts the search range by comparing the result of the 'ispossible' function
+ -- and updating the 'start' and 'end' variables accordingly.
+
+
+ -- Binary search on answer is a powerful technique that can greatly reduce the time complexity of
+ -- searching for optimal or specific values in a problem, particularly when the values are within
+ -- a known range or can be compared to a specific criterion.
+
+ -- It is widely used in various problem-solving scenarios to optimize search algorithms and find efficient solutions.
+
+ -- Typically used when to find "min of max/max of min"
+
+
+ List of Similar Questions :
+ ===========================
+    1) Capacity To Ship Packages Within D Days Problem ID: 1011
+
+    2) Split Array Largest Sum Problem ID: 410
+
+    3) Minimize Maximum Pair Sum in Array Problem ID: 1877
+
+    4) Maximize Sweetness of Chocolate Problem ID: 1231
+
+    5) Minimum Limit of Balls in a Bag : 1760

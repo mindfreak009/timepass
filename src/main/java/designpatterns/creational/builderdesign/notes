@@ -1,0 +1,18 @@
+Builder Design Pattern:
+======================
+   ○ Builder Design Pattern helps to construct complex objects step-by-step.
+   ○ It is used when an object requires many optional fields or has a long list of parameters.
+
+Where it is used ?
+==================
+   ○ To create immutable objects.
+   ○ When there are multiple optional parameters.
+   ○ When you want cleaner and more readable object construction.
+
+
+Concept Explanation:
+====================
+ ○ Imagine you have a User class, with 10 fields, some optional and some mandatory.
+ ○ Instead of writing many constructors, you can use the Builder pattern.
+
+

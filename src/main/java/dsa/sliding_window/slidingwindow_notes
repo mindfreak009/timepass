@@ -1,0 +1,23 @@
+Find Max Sum Subarray of Size K
+=================================
+
+   int[] arr = {100, 200, 300, 400} ,  K = 2
+
+
+   Brute force Approach :
+   ======================
+
+   Time Complexity : (N-K) * K
+                      (NK+K^2)
+
+
+   int sum = 0;
+   int maxSum = 0;
+
+   for(i=0; i < N-K+1; i++) {                 ------> N-K
+        sum = 0;
+        for(int j=i; j < i+K; j++) {         ------>  K
+            sum += arr[j];
+        }
+        maxSum = Math.max(maxSum, sum);
+   }

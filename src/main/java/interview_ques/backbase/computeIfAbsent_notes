@@ -1,0 +1,12 @@
+
+ •  In Java, the computeIfAbsent() method of the HashMap class is used to compute and insert a value for a specific key to a HashMap
+    only if the key does not already have a value.
+
+ map.computeIfAbsent(key, k -> value);
+    ➼ If key is absent:
+         create value
+         put into map
+         return value
+
+    ➼ Else:
+        return existing value
