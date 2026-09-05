@@ -5,6 +5,18 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class RemoveNeighboursFromHighestOccurence {
+    public static void main(String[] args) {
+        int[] arr = {5, 1, 10, 11, 3, 7, 10, 15, 2};
+        System.out.println("first one:: " + removeNeighbors(arr));
+
+        List<Integer> input =
+                Arrays.asList(5, 1, 10, 11, 3, 7, 10, 15, 2);
+        List<Integer> output = removeNeighborsOfMostFrequent(input);
+        List<Integer> output1 = removeNeighborsOfMostFrequentElements(input);
+        System.out.println(output);
+        System.out.println("from family 1::: " + output1);
+
+    }
 
     public static List<Integer> removeNeighborsOfMostFrequent(List<Integer> input) {
         // count frequencies
@@ -106,18 +118,5 @@ public class RemoveNeighboursFromHighestOccurence {
             }
         }
         return list;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {5, 1, 10, 11, 3, 7, 10, 15, 2};
-        System.out.println("first one:: " + removeNeighbors(arr));
-
-        List<Integer> input =
-                Arrays.asList(5, 1, 10, 11, 3, 7, 10, 15, 2);
-        List<Integer> output = removeNeighborsOfMostFrequent(input);
-        List<Integer> output1 = removeNeighborsOfMostFrequentElements(input);
-        System.out.println(output);
-        System.out.println("from family 1::: " + output1);
-
     }
 }

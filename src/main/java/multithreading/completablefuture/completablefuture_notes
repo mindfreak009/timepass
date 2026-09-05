@@ -4,3 +4,18 @@
 -- By default, CompletableFuture tasks often run on daemon threads due to the use of ForkJoinPool.commonPool
 -- You can control the thread type by providing a Custom Executor Service.
 -- The CompletableFuture task itself doesn't dictate whether it's daemon or user thread.
+
+
+Chaining in CompletableFuture :
+===============================
+  » thenApply(Function)           transform
+  » thenAccept(Consumer)          consumer
+  » thenRun(Runnable)
+
+
+⦿ CompletableFuture uses Fork-Join Pool Executor behind the scenes to execute its task.
+  »  The Fork/Join Pool (part of java.util.concurrent) is a Java framework designed for executing parallel tasks, especially when a large task can be broken into many smaller independent tasks.
+  »  The main class is: ForkJoinPool
+  » A task is typically represented by:
+        ⦿ RecursiveTask<T> — when the task returns a result
+        ⦿ RecursiveAction — when the task doesn't return a result

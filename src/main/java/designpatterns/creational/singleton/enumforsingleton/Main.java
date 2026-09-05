@@ -10,5 +10,9 @@ public class Main {
                 DatabaseConnectionManager.INSTANCE;
 
         System.out.println(obj1 == obj2);
+        System.out.println(obj1.getConnectionString());
+        System.out.println(obj2.getConnectionString());
+        System.out.println(obj2.connect());
+        System.out.println(obj1.connect());
     }
 }

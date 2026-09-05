@@ -36,7 +36,7 @@ public class BestTimeToBuyAndSellStockII {
       // int[] num = {7, 6, 4, 3, 1};
       // int[] num = {1, 3, 4, 6, 7};
         int profit = 0;
-        int firstProfit = 0;
+        int tempProfit = 0;
         for (int i = 0; i < num.length-1; i++) {
 
             int buyDate = num[i];
@@ -44,8 +44,8 @@ public class BestTimeToBuyAndSellStockII {
 
             if(buyDate < sellDate) {
                 profit = profit + (sellDate - num[i]);
-                firstProfit = profit;
-                profit = Math.max(firstProfit, profit);
+                tempProfit = profit;
+                profit = Math.max(tempProfit, profit);
                 System.out.println("profit :: " +profit);
             }
         }

@@ -37,7 +37,7 @@ public class GroupingAndCounting {
         System.out.println("sum is:: " +sum);
 
         Integer sum2 = list.stream().reduce(0, Integer::sum);
-        System.out.println("sum2 is:: " +sum);
+        System.out.println("sum2 is:: " +sum2);
 
         int sum3 = list.stream()
                 .mapToInt(Integer::intValue)
@@ -60,8 +60,8 @@ public class GroupingAndCounting {
 
         // To remove the last comma in a string
         List<String> stringList = Arrays.asList("JAVA", "J2EE", "Spring", "Hibernate");
-        stringList.stream()
-                        .forEach(i -> System.out.print(i + " "));
+//        stringList.stream()
+//                        .forEach(i -> System.out.print(i + " "));
 
         stringList.stream().map((s) -> s + ", ")
                 .map((s) -> s.lastIndexOf(",")).toString();

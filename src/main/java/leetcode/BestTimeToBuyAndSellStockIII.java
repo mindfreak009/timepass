@@ -49,18 +49,12 @@ public class BestTimeToBuyAndSellStockIII {
 
         for(int i=0; i<prices.length; i++){
             buy1 = Math.min(buy1, prices[i]);
-            System.out.println("buy1 :: " + buy1);
             sell1 = Math.max(sell1, prices[i]-buy1);
 
-            System.out.println("sell1 :: "+ sell1);
-            buy2 = Math.min(buy2, prices[i]-sell1);
+            // I already made sell1 dollars from my first transaction, so when I buy my second stock, my effective cost is (price - sell1)
+            buy2 = Math.min(buy2, prices[i]-sell1);  // uses profit from #SELL1
             sell2 = Math.max(sell2, prices[i]-buy2);
-
-            System.out.println("sell2 :: "+ sell2);
-
-
         }
-
         return sell2;
     }
 }

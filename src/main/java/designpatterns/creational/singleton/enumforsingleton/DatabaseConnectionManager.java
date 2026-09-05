@@ -23,8 +23,9 @@ public enum DatabaseConnectionManager {
         System.out.println("Singleton initialized");
     }
 
-    public void connect() {
+    public boolean connect() {
         System.out.println("Connecting to " + connectionString);
+        return false;
     }
 
     public String getConnectionString() {

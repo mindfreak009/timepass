@@ -28,5 +28,10 @@ Multithreading :
 ➼ If no permits are available, threads block until one becomes available.
 
 
+ThreadLocal
+-----------
+  ➼ Don't share this data between threads in the first place.
+  ➼ ThreadLocal<T> gives every thread its own independent T value.
+
 
 
