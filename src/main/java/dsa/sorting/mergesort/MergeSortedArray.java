@@ -48,19 +48,51 @@ public class MergeSortedArray {
         int[] nums2 = {2,5,6};
         int n = 3;
 
-        System.out.println(Arrays.toString(merge(nums1, m, nums2, n)));
+       System.out.println(Arrays.toString(merge(nums1, m, nums2, n)));
+       System.out.println(Arrays.toString(mergeUsingExtraSpace(nums1, m, nums2, n)));
     }
 
+    // Time Complexity: O(m+n)
+    // Space Complexity: O(m+n)
+    public static int[] mergeUsingExtraSpace(int[] nums1, int m, int[] nums2, int n) {
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        int[] merged = new int[m+n];
+
+        // merge the sorted array
+        while(i < m && j < n) {
+            if(nums1[i] <= nums2[j]) {
+                merged[k++] = nums1[i++];
+            } else {
+                merged[k++] = nums2[j++];
+            }
+        }
+
+        while(i < m) {
+            merged[k++] = nums1[i++];
+        }
+
+        while(j < n) {
+            merged[k++] = nums2[j++];
+        }
+
+        return merged;
+    }
+
+    // Time Complexity: O(m+n)
+    // Space Complexity: O(1)
     public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
             int i = m-1;
             int j = n-1;
             int k = m+n-1;
 
-            while(j >=0) {
-                if(i >=0 && nums1[i] > nums2[j]) {
-                    nums1[k] = nums1[i];
-                    k--;
-                    i--;
+            // we are trying to sort the arrays from the end
+            // the greater number goes at the end
+            while(i >=0 && j >=0) {
+                if(nums1[i] > nums2[j]) {
+                    nums1[k--] = nums1[i--];
                 } else {
                     nums1[k] = nums2[j];
                     k--;
@@ -69,4 +101,5 @@ public class MergeSortedArray {
             }
         return nums1;
     }
+
 }
