@@ -1,6 +1,6 @@
-package designpatterns.behavioral.strategy;
+package designpatterns.behavioral.strategy.example1;
 
-public class FestivalDiscount implements DiscountStrategy{
+public class FestivalDiscount implements DiscountStrategy {
 
     @Override
     public double applyDiscount(double price) {

@@ -1,4 +1,4 @@
-package designpatterns.creational.builderdesign;
+package designpatterns.creational.builderdesign.example2;
 
 // The Builder Design Pattern helps us to slice the operations of building an object.
 // It focuses on constructing a complex object step by step.

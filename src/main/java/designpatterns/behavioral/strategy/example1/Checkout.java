@@ -1,4 +1,4 @@
-package designpatterns.behavioral.strategy;
+package designpatterns.behavioral.strategy.example1;
 
 // Context
 public class Checkout {

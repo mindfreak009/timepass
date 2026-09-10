@@ -1,4 +1,4 @@
-package designpatterns.creational.builderdesign;
+package designpatterns.creational.builderdesign.example2;
 
 public class User {
     private final String userId;

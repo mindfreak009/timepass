@@ -7,9 +7,7 @@ package leetcode;
 // Solve this question with an algorithm that is less than O(n^2) time complexity
 // https://leetcode.com/problems/two-sum/description/
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TwoSum {
     public static void main(String[] args) {
@@ -24,7 +22,8 @@ public class TwoSum {
          // int target = 6;
 
        //  System.out.println(Arrays.toString(getTwoSumIndex(nums, target)));
-        System.out.println(Arrays.toString(twoSum(nums, target)));
+        // System.out.println(Arrays.toString(twoSum(nums, target)));
+        System.out.println(twoSum1(nums, target));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -47,5 +46,25 @@ public class TwoSum {
             }
         }
         return new int[] {-1, -1};
+    }
+
+    // 2, 7, 11, 15
+    // target: 9
+    public static boolean twoSum1(int[] nums, int target) {
+        if(nums.length < 2) {
+            return false;
+        }
+
+       Set<Integer> set = new HashSet<>();
+        for(int i= 0; i<nums.length; i++) {
+            int sum = target - nums[i];
+            System.out.println("sum:: " +sum);
+            if(set.contains(sum)) {
+                return true;
+            }
+            set.add(nums[i]);
+            System.out.println("set:: " +set);
+        }
+        return false;
     }
 }
