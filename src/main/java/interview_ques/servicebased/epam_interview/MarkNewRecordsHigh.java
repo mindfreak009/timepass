@@ -8,10 +8,11 @@ import java.util.List;
 
 //  An element is considered a new record high if:
 //     ● The first element is always considered a record high and should be marked 1.
-//  For every subsequent element:
-//    ● It must be greater than its immediate predecessor, and
-//    ● It must be greater than the maximum value seen so far, including all elements before it.
-//    ● If both conditions are satisfied, mark the position with 1; otherwise, mark it with 0.
+
+//     ◘ For every subsequent element:
+//         ● It must be greater than its immediate predecessor, and
+//         ● It must be greater than the maximum value seen so far, including all elements before it.
+//         ● If both conditions are satisfied, mark the position with 1; otherwise, mark it with 0.
 
 public class MarkNewRecordsHigh {
     public static void main(String[] args) {
