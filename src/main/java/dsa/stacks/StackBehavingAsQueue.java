@@ -20,16 +20,13 @@ public class StackBehavingAsQueue {
                 s2.push(s1.pop());
             }
 
-            System.out.println("s2 now :: " +s2);
             // Push item into s1
             s1.push(x);
-            System.out.println("s1 now :: " +s1);
 
             // Push everything back to s1
             while(!s2.isEmpty()) {
                 s1.push(s2.pop());
             }
-            System.out.println("s1 now:: " +s1);
         }
 
         static int deQueue() {
@@ -53,8 +50,8 @@ public class StackBehavingAsQueue {
         Queue.enQueue(2);
         Queue.enQueue(3);
 
-        System.out.println("sss1 :: " +Queue.s1);
-        System.out.println("sss2 :: " +Queue.s2);
+        System.out.println("stack1 :: " +Queue.s1);
+        System.out.println("stack2 :: " +Queue.s2);
        // System.out.println(Queue.deQueue());
        // System.out.println(Queue.deQueue());
        // System.out.println(Queue.deQueue());

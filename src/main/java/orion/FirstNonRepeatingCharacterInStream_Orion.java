@@ -17,7 +17,10 @@ public class FirstNonRepeatingCharacterInStream_Orion {
 
                 input.chars()
                 .mapToObj(i -> (char) i)
-                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+                .collect(Collectors.groupingBy(
+                        Function.identity(),
+                        LinkedHashMap::new,
+                        Collectors.counting()))
                 .entrySet()
                 .stream()
                 .filter(x -> x.getValue() == 1)
