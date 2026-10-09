@@ -35,9 +35,10 @@ public class FindMissingAndRepeatedValues_2965 {
         System.out.println(ClassLoader.getPlatformClassLoader());
         System.out.println(ClassLoader.getSystemClassLoader());
 
+        System.out.println(Arrays.toString(findMissingAndRepeatedValues1(grid)));
     }
 
-    // Time Complexity:
+    // Time Complexity: O(N^2)
     public static int[] findMissingAndRepeatedValues(int[][] grid) {
         int n = grid.length;
         int sq = n*n;
@@ -61,6 +62,37 @@ public class FindMissingAndRepeatedValues_2965 {
         System.out.println("expectedTotal :: " + expectedTotal);
         System.out.println("currSum :: " + currSum);
         return new int[] {repeatedNumbers, Math.abs(expectedTotal-currSum)};
+    }
 
+    // Time Complexity: O(N)
+    private static int[] findMissingAndRepeatedValues1(int[][] grid) {
+
+        // Time Complexity: O(N)
+        // flattening the map
+        int[] arr = Arrays.stream(grid)
+                .flatMapToInt(Arrays::stream)
+                .toArray();
+
+        int repeated = -1;
+        int missing = -1;
+
+        // [9, 1, 7, 8, 9, 2, 3, 4, 6]
+        for (int i = 0; i < arr.length; i++) {
+            int index = Math.abs(arr[i]) - 1;
+
+            if(arr[index] < 0) {
+                repeated = Math.abs(arr[i]);
+            }
+            arr[index] = -arr[index];
+
+            // A positive value means its corresponding number was missing
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[j] > 0) {
+                    missing = j + 1;
+                    break;
+                }
+            }
+        }
+        return new int[]{repeated, missing};
     }
 }
