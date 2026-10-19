@@ -1,0 +1,37 @@
+
+Original Question:
+===================
+        SELECT c.customer_id, c.customer_name,
+               (SELECT SUM(o.amount)
+                FROM orders o
+                WHERE o.customer_id = c.customer_id) AS total_spent
+        FROM customers c
+        WHERE LOWER(c.city) = 'mumbai'
+          AND c.customer_id IN (
+              SELECT customer_id
+              FROM orders
+              WHERE status = 'COMPLETED'
+                AND DATE(order_date) >= '2026-01-01'
+          )
+        ORDER BY total_spent DESC;
+
+
+
+# Uses COALESCE() to return zero instead of NULL for a null aggregate.
+
+Answer:
+=======
+
+    SELECT
+        c.customer_id,
+        c.customer_name,
+        COALESCE(SUM(o.amount), 0) AS total_spent
+    FROM customers c
+    JOIN orders o
+        ON o.customer_id = c.customer_id
+    WHERE c.city = 'Mumbai'
+      AND o.status = 'COMPLETED'
+      AND o.order_date >= '2026-01-01'
+    GROUP BY
+        c.customer_id, c.customer_name
+    ORDER BY total_spent DESC;

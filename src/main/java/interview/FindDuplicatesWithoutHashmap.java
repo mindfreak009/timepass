@@ -63,8 +63,8 @@ public class FindDuplicatesWithoutHashmap {
         System.out.println("Duplicates: " + duplicates);
     }
 
-    // This approach works only if the array is the range [1.....n]
-    public static void findDuplicates(int[] nums) {
+    // This approach works only if the array is the range [1.....n] and numbers are sequential
+    public static List<Integer> findDuplicates(int[] nums) {
         List<Integer> duplicates = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
@@ -72,12 +72,14 @@ public class FindDuplicatesWithoutHashmap {
 
             // If the value at this index is already negative, it's a duplicate
             if (nums[index] < 0) {
-                //duplicates.add(Math.abs(nums[i]));
+                duplicates.add(Math.abs(nums[i]));
                 System.out.println("Duplicate: " + Math.abs(nums[i]));
             } else {
                 // Mark as visited
                 nums[index] = -nums[index];
             }
         }
+
+        return duplicates;
     }
 }

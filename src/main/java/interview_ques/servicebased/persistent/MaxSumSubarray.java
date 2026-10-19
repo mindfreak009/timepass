@@ -1,4 +1,4 @@
-package persistent;
+package interview_ques.servicebased.persistent;
 
 public class MaxSumSubarray {
     public static void main(String[] args) {

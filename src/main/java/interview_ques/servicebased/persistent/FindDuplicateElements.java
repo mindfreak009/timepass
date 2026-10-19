@@ -1,4 +1,4 @@
-package persistent;
+package interview_ques.servicebased.persistent;
 
 import java.util.Arrays;
 import java.util.HashSet;
